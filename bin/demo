@@ -1,0 +1,96 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "mailbluster"
+
+puts "========================================"
+
+mailbluster_client = Mailbluster::Client.new(
+  ENV["MAILBLUSTER_API_KEY"],
+  Logger.new(STDOUT)
+)
+
+puts "Mailbluster client initialized!"
+
+puts "========================================"
+
+create_lead_attributes = {
+  "firstName" => "Richard",
+  "lastName" => "Hendricks",
+  "fields" => {
+    "gender" => "Male",
+    "address" => "Silicon Valley"
+  },
+  "email" => "richard@example.com",
+  "ipAddress" => "162.213.1.246",
+  "subscribed" => false,
+  "doubleOptIn" => true,
+  "meta" => {
+    "company" => "Pied Piper",
+    "role" => "CEO"
+  },
+  "tags" => [
+    "iPhone User",
+    "Startup"
+  ],
+  "overrideExisting" => true
+}
+
+puts "Demo lead attributes: #{create_lead_attributes.inspect}"
+puts "Press enter to create a lead with these attributes"
+gets
+
+created_lead = mailbluster_client.leads.create(
+  create_lead_attributes
+)
+puts "Lead created: #{created_lead.inspect}"
+
+puts "========================================"
+
+puts "Press enter to find the lead with the email: #{created_lead.email}"
+gets
+
+found_lead = mailbluster_client.leads.read(created_lead.email)
+
+puts "Lead found: #{found_lead.inspect}"
+
+puts "========================================"
+
+puts "Press enter to update the lead with the email: #{created_lead.email}"
+gets
+
+updated_lead = mailbluster_client.leads.update(
+  created_lead.email,
+  {
+    "fields" => {
+      "gender" => "Male",
+      "address" => nil,
+      "hobby" => "Programming"
+    },
+    "subscribed" => true,
+    "meta" => {
+      "company" => "Piper Net"
+    },
+    "addTags" => [
+      "Entrepreneur"
+    ],
+    "removeTags" => [
+      "iPhone User"
+    ]
+  }
+)
+
+puts "Lead updated: #{updated_lead.inspect}"
+
+puts "========================================"
+
+puts "Press enter to delete the lead with the email: #{updated_lead.email}"
+gets
+
+mailbluster_client.leads.delete(updated_lead.email)
+
+puts "Lead deleted!"
+
+puts "========================================"
+
+puts "Demo complete!"

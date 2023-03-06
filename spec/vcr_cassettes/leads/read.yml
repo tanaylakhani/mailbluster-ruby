@@ -1,0 +1,76 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.mailbluster.com/api/leads/5a91f0b2d2c1e5c3229d906d978b7337
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - mailbluster-ruby/0.1.0/rest-client/2.1.0 (darwin21.4.0 x86_64) ruby/2.3.8p459
+      Content-Type:
+      - application/json
+      Authorization:
+      - MAILBLUSTER_API_KEY
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mailbluster.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Mar 2023 18:44:16 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'none';frame-ancestors 'none'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Permissions-Policy:
+      - interest-cohort=()
+      Vary:
+      - Origin
+      Etag:
+      - W/"1e3-10EFx1zLHrQcKHt0OBJUIMOhwGM"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2F9L6ObjrJhcIDF3f4Z%2Bs90yi%2BdosoQNC7bQnGjq1HS2u2mxeEPHc0gXwg%2BeYu2aG8Wa%2FSsl8JN5uxA3CbbBdQQO%2FJ3iyLa%2FsCQAD2%2FLvP0MN%2B0Wo1dMuVv%2FXotEErvNQ%2BvBVRfaH"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a5577dfdfe0503c-WAW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":262456492,"firstName":"Richard","lastName":"Hendricks","fullName":"Richard
+        Hendricks","fields":{},"email":"richard@example.com","timezone":"America/Toronto","ipAddress":"162.213.1.246","subscribed":false,"meta":{"city":"","role":"CEO","source":"Lead
+        API","company":"Pied Piper","country":"Canada","latitude":43.6319,"continent":"North
+        America","longitude":-79.3716},"tags":["iPhone User","Startup"],"createdAt":"2023-03-09T18:43:32.000Z","updatedAt":"2023-03-09T18:43:37.000Z"}'
+  recorded_at: Thu, 09 Mar 2023 18:44:16 GMT
+recorded_with: VCR 6.0.0

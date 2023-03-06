@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mailbluster.com/api/fields
+    body:
+      encoding: UTF-8
+      string: '{"fieldLabel":"Gender","fieldMergeTag":"gender"}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - mailbluster-ruby/0.1.0/rest-client/2.1.0 (darwin18.7.0 x86_64) ruby/2.4.9p362
+      Content-Type:
+      - application/json
+      Authorization:
+      - MAILBLUSTER_API_KEY
+      Content-Length:
+      - '48'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mailbluster.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 09 Mar 2023 19:35:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '170'
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'none';frame-ancestors 'none'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Permissions-Policy:
+      - interest-cohort=()
+      Vary:
+      - Origin
+      Etag:
+      - W/"aa-PIYz4Z3cRfniGBEP9V9kEYLagaQ"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=SZFA8kHchGHJQz06PfMqbAAL8upWvGcz97s888bkZ948iDB%2Fn4Ue3UuQVxDQNsHmQbAI2oxaesmwRhGAE4gQINlp5o4bCqSBd1ZsylJG3A%2BgbXaYtscffHEfzX4IkaaynkSUfC8Z"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a55c261ad33fc6b-WAW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"message":"Field added","field":{"id":1653,"fieldLabel":"Gender","fieldMergeTag":"gender","createdAt":"2023-03-09T19:35:07.852Z","updatedAt":"2023-03-09T19:35:07.852Z"}}'
+  recorded_at: Thu, 09 Mar 2023 19:35:07 GMT
+recorded_with: VCR 6.0.0

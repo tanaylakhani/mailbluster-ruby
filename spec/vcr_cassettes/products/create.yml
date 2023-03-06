@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mailbluster.com/api/products
+    body:
+      encoding: UTF-8
+      string: '{"id":"101","name":"Reign Html Template"}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - mailbluster-ruby/0.1.0/rest-client/2.1.0 (darwin18.7.0 x86_64) ruby/2.4.9p362
+      Content-Type:
+      - application/json
+      Authorization:
+      - MAILBLUSTER_API_KEY
+      Content-Length:
+      - '41'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mailbluster.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 09 Mar 2023 20:34:52 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '159'
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'none';frame-ancestors 'none'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Permissions-Policy:
+      - interest-cohort=()
+      Vary:
+      - Origin
+      Etag:
+      - W/"9f-Hhkk7eyRNog1vKOJU9y2Q4Es8bE"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=KyAuTJ47Rj06y6lcvrSF6uVYweRcPnFZNiPvyDho1XMHoUBTlXUjWtWANa367YkIL1wVhtF2B0G4YWREC%2F1ioySjdvwsB58H0Il1%2BwIxoZSmbUjVrX2il13o0S%2BcbBumLoQH8azS"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a5619e8087dffbc-WAW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"message":"Product created","product":{"id":"101","name":"Reign Html
+        Template","createdAt":"2023-03-09T20:34:52.873Z","updatedAt":"2023-03-09T20:34:52.873Z"}}'
+  recorded_at: Thu, 09 Mar 2023 20:34:52 GMT
+recorded_with: VCR 6.0.0

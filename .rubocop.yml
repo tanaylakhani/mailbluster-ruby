@@ -1,5 +1,5 @@
 require:
-  - rubocop-minitest
+  - rubocop-rspec
   - rubocop-packaging
   - rubocop-performance
   - rubocop-rake
@@ -8,103 +8,90 @@ AllCops:
   DisplayCopNames: true
   DisplayStyleGuide: true
   NewCops: enable
-  TargetRubyVersion: 2.6
-  Exclude:
-    - "tmp/**/*"
-    - "vendor/**/*"
-
-Layout/FirstArrayElementIndentation:
-  EnforcedStyle: consistent
-
-Layout/FirstArrayElementLineBreak:
-  Enabled: true
-
-Layout/FirstHashElementLineBreak:
-  Enabled: true
-
-Layout/FirstMethodArgumentLineBreak:
-  Enabled: true
-
-Layout/HashAlignment:
-  EnforcedColonStyle:
-    - table
-    - key
-  EnforcedHashRocketStyle:
-    - table
-    - key
-
-Layout/MultilineArrayLineBreaks:
-  Enabled: true
-
-Layout/MultilineHashKeyLineBreaks:
-  Enabled: true
-
-Layout/MultilineMethodArgumentLineBreaks:
-  Enabled: true
-
-Layout/MultilineMethodCallIndentation:
-  EnforcedStyle: indented
-
-Layout/SpaceAroundEqualsInParameterDefault:
-  EnforcedStyle: no_space
-
-Metrics/AbcSize:
-  Max: 20
-  Exclude:
-    - "test/**/*"
-
-Metrics/BlockLength:
-  Exclude:
-    - "*.gemspec"
-    - "Rakefile"
-
-Metrics/ClassLength:
-  Exclude:
-    - "test/**/*"
-
-Metrics/MethodLength:
-  Max: 18
-  Exclude:
-    - "test/**/*"
-
-Metrics/ParameterLists:
-  Max: 6
-
-Minitest/EmptyLineBeforeAssertionMethods:
+  TargetRubyVersion: 2.4
+  Include:
+    - '**/*.rb'
+    - 'Gemfile'
+    - '*.gemspec'
+    - 'bin/*'
+Gemspec/RequiredRubyVersion:
   Enabled: false
-
-Naming/MemoizedInstanceVariableName:
+Layout/LineLength:
+  Max: 100
+Style/NumericPredicate:
+  EnforcedStyle: comparison
+RSpec/NestedGroups:
   Enabled: false
-
-Naming/VariableNumber:
+RSpec/DescribeClass:
   Enabled: false
-
-Rake/Desc:
+RSpec/IteratedExpectation:
   Enabled: false
-
-Style/BarePercentLiterals:
-  EnforcedStyle: percent_q
-
-Style/ClassAndModuleChildren:
+RSpec/MessageSpies:
   Enabled: false
-
+RSpec/AnyInstance:
+  Enabled: false
+RSpec/ExampleLength:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
+Style/ZeroLengthPredicate:
+  Enabled: false
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: never
 Style/Documentation:
   Enabled: false
-
+Metrics/BlockLength:
+  Exclude:
+    - db/seeds.rb
+    - app/admin/**/*.rb
+    - spec/**/*_spec.rb
+    - config/routes.rb
+    - config/deploy/*.rb
+    - app/admin/**/*.rb
+    - lib/tasks/**/*.rake
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*.rb
+  Max: 25
+Metrics/CyclomaticComplexity:
+  Max: 15
+Metrics/ParameterLists:
+  Max: 6
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+Style/MultilineBlockChain:
+  Enabled: false
+Style/NegatedIf:
+  EnforcedStyle: postfix
+RSpec/MessageChain:
+  Enabled: false
+Layout/DotPosition:
+  EnforcedStyle: trailing
+  Enabled: true
+Metrics/MethodLength:
+  Max: 20
+  Exclude:
+    - 'db/**/*.rb'
 Style/DoubleNegation:
   Enabled: false
-
-Style/EmptyMethod:
+Style/WordArray:
+  EnforcedStyle: brackets
+Style/SymbolArray:
+  EnforcedStyle: brackets
+Style/CommentedKeyword:
   Enabled: false
-
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-Style/NumericPredicate:
-  Enabled: false
-
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
-
-Style/TrivialAccessors:
-  AllowPredicates: true
+Naming/PredicateName:
+  Exclude:
+    - 'app/serializers/**/*.rb'

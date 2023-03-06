@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.mailbluster.com/api/products/?pageNo=1
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - mailbluster-ruby/0.1.0/rest-client/2.1.0 (darwin18.7.0 x86_64) ruby/2.4.9p362
+      Content-Type:
+      - application/json
+      Authorization:
+      - MAILBLUSTER_API_KEY
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mailbluster.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Mar 2023 20:58:43 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'none';frame-ancestors 'none'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Permissions-Policy:
+      - interest-cohort=()
+      Vary:
+      - Origin
+      Etag:
+      - W/"e3-ccjWC0O31TLdpabWcJR1tkkQabA"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2B09LYDuZeSDwpU%2F7wIRXYWBZ8yjXBvBCtZXYZJWNK9W5PBumTPTfSlUaCUsEJAIh3naYRnyd8yeJYxSbc1xmVXinXaFhdCQQxzKqEPF1Z19ob4o5PJsDN2QbAHM78k%2BUiCvwyZuY"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a563cd39ac7f288-WAW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"products":[{"id":"101","name":"Reign Html Template","createdAt":"2023-03-09T20:34:52.000Z","updatedAt":"2023-03-09T20:34:52.000Z"}],"meta":{"total":1,"prevPageNo":null,"pageNo":1,"nextPageNo":null,"perPage":10,"totalPage":1}}'
+  recorded_at: Thu, 09 Mar 2023 20:58:43 GMT
+recorded_with: VCR 6.0.0
