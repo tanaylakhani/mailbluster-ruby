@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.mailbluster.com/api/leads/5a91f0b2d2c1e5c3229d906d978b7337
+    body:
+      encoding: UTF-8
+      string: '{"email":"invalidemail"}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - mailbluster-ruby/0.1.0/rest-client/2.1.0 (darwin21.4.0 x86_64) ruby/2.3.8p459
+      Content-Type:
+      - application/json
+      Authorization:
+      - MAILBLUSTER_API_KEY
+      Content-Length:
+      - '24'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mailbluster.com
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Date:
+      - Thu, 09 Mar 2023 19:18:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '36'
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'none';frame-ancestors 'none'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Permissions-Policy:
+      - interest-cohort=()
+      Vary:
+      - Origin
+      Etag:
+      - W/"24-ajvsjJEA6GNy0RCtGR6Do3d5JjA"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gwr9SyRUsXAxgyN%2B9FJIX1DqdpT8HnQt04sXFH7J2%2BxAb4soWbCaiUNbqXfRfLgSllaSigc0sYBnyNk3L6%2FaY7gqntjbH7PJuB72mJFFlmWopdStmW%2Fmmpe49Jigfv7Uayhs5f5M"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a55aaa8ba6434a4-WAW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"email":"Email address is invalid"}'
+  recorded_at: Thu, 09 Mar 2023 19:18:56 GMT
+recorded_with: VCR 6.0.0

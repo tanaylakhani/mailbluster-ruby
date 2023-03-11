@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.mailbluster.com/api/products/101
+    body:
+      encoding: UTF-8
+      string: '{"name":"Reign PRO Html Template"}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - mailbluster-ruby/0.1.0/rest-client/2.1.0 (darwin18.7.0 x86_64) ruby/2.4.9p362
+      Content-Type:
+      - application/json
+      Authorization:
+      - MAILBLUSTER_API_KEY
+      Content-Length:
+      - '34'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mailbluster.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Thu, 09 Mar 2023 21:00:44 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '163'
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'none';frame-ancestors 'none'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Permissions-Policy:
+      - interest-cohort=()
+      Vary:
+      - Origin
+      Etag:
+      - W/"a3-Pchw5L15EUboOHz9oThJTJp/iBM"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3BUge1g307T64XI5vxBZGRmzC0lWFydQo4UiRuNeBu8bT8NESA4yNnl7M6lJ7DMMHf4gfZ2Ob8fTxoVTBha1cz9femx8QAohBRWskmNI7RdHZVEHhRDcftI1WxgNctn0P8%2BCCvo%2F"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a563fcba8f0165b-WAW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"message":"Product updated","product":{"id":"101","name":"Reign PRO
+        Html Template","createdAt":"2023-03-09T20:34:52.000Z","updatedAt":"2023-03-09T21:00:44.000Z"}}'
+  recorded_at: Thu, 09 Mar 2023 21:00:44 GMT
+recorded_with: VCR 6.0.0

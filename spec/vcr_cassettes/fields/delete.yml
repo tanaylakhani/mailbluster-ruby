@@ -1,0 +1,73 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://api.mailbluster.com/api/fields/1653
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - mailbluster-ruby/0.1.0/rest-client/2.1.0 (darwin18.7.0 x86_64) ruby/2.4.9p362
+      Content-Type:
+      - application/json
+      Authorization:
+      - MAILBLUSTER_API_KEY
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mailbluster.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Mar 2023 20:03:51 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '37'
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'none';frame-ancestors 'none'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Permissions-Policy:
+      - interest-cohort=()
+      Vary:
+      - Origin
+      Etag:
+      - W/"25-H8YLLesOlIDMNWdQzR0p8WvZCGo"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0YyB0PbhVrY0rnvZ4PGATrEOAABcWtAF%2BSiv5etfHBeQ3kPvIoPj5zlzwmvWB7oiwM333FYc5xrcBUN5LOijAymPfYvfHEayUmCLOVViw6RC3JJhoWpmT0Zy349pk6ViYC6WqTJu"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a55ec789db5bf33-WAW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"message":"Field deleted","id":1653}'
+  recorded_at: Thu, 09 Mar 2023 20:03:51 GMT
+recorded_with: VCR 6.0.0

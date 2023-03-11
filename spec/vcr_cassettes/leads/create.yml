@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.mailbluster.com/api/leads
+    body:
+      encoding: UTF-8
+      string: '{"firstName":"Richard","lastName":"Hendricks","fields":{"gender":"Male","address":"Silicon
+        Valley"},"email":"richard@example.com","ipAddress":"162.213.1.246","subscribed":false,"doubleOptIn":true,"meta":{"company":"Pied
+        Piper","role":"CEO"},"tags":["iPhone User","Startup"],"overrideExisting":true}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - mailbluster-ruby/0.1.0/rest-client/2.1.0 (darwin21.4.0 x86_64) ruby/2.3.8p459
+      Content-Type:
+      - application/json
+      Authorization:
+      - MAILBLUSTER_API_KEY
+      Content-Length:
+      - '298'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mailbluster.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Wed, 08 Mar 2023 21:47:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '541'
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'none';frame-ancestors 'none'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Permissions-Policy:
+      - interest-cohort=()
+      Vary:
+      - Origin
+      Etag:
+      - W/"21d-7yeVwJYvSO2He8LIjRiKXxD117A"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a4e47141ae134eb-WAW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"message":"Lead updated","lead":{"id":262093545,"firstName":"Richard","lastName":"Hendricks","fullName":"Richard
+        Hendricks","fields":{},"email":"richard@example.com","timezone":"America/Toronto","ipAddress":"162.213.1.246","subscribed":false,"optInStatus":"waiting","meta":{"city":"","role":"CEO","source":"Lead
+        API","company":"Pied Piper","country":"Canada","latitude":43.6319,"continent":"North
+        America","longitude":-79.3716},"tags":["iPhone User","Startup"],"createdAt":"2023-03-08T21:26:08.000Z","updatedAt":"2023-03-08T21:26:10.000Z"}}'
+  recorded_at: Wed, 08 Mar 2023 21:47:37 GMT
+recorded_with: VCR 6.0.0
