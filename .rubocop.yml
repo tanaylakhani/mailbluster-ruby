@@ -95,3 +95,5 @@ Style/CommentedKeyword:
 Naming/PredicateName:
   Exclude:
     - 'app/serializers/**/*.rb'
+RSpec/FactoryBot:
+  Enabled: false

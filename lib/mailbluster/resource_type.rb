@@ -17,40 +17,24 @@ module Mailbluster
     end
 
     def read(id_or_email_md5 = "")
-      if lead?
-        id_or_email_md5 = Utils.md5(id_or_email_md5) if id_or_email_md5.include?("@")
-      end
+      id_or_email_md5 = Utils.md5(id_or_email_md5) if lead? && id_or_email_md5.include?("@")
       if id_or_email_md5.is_a?(Hash)
-        query_params = id_or_email_md5.map do |k, v|
-          [Utils.camelize(k.to_s), v]
-        end.to_h
+        query_params = query_parameterize(id_or_email_md5)
         id_or_email_md5 = ""
       end
-      raw_resource_attributes = @client.get(
-        "#{resource_type}/#{id_or_email_md5}",
-        query_params: query_params
-      )
-      if id_or_email_md5 == "" && raw_resource_attributes[resource_type].is_a?(Array)
-        raw_resource_attributes[resource_type].map do |rra|
-          Resource.new(self, rra)
-        end
-      else
-        Resource.new(self, raw_resource_attributes)
-      end
+      raw_resource_attributes = @client.get("#{resource_type}/#{id_or_email_md5}",
+                                            query_params: query_params)
+      map_to_resource(id_or_email_md5, raw_resource_attributes)
     end
 
     def update(id_or_email_md5, new_attributes)
-      if lead?
-        id_or_email_md5 = Utils.md5(id_or_email_md5) if id_or_email_md5.include?("@")
-      end
+      id_or_email_md5 = Utils.md5(id_or_email_md5) if lead? && id_or_email_md5.include?("@")
       raw_resource_attributes = @client.put("#{resource_type}/#{id_or_email_md5}", new_attributes)
       Resource.new(self, raw_resource_attributes[singular_resource_type] || raw_resource_attributes)
     end
 
     def delete(id_or_email_md5)
-      if lead?
-        id_or_email_md5 = Utils.md5(id_or_email_md5) if id_or_email_md5.include?("@")
-      end
+      id_or_email_md5 = Utils.md5(id_or_email_md5) if lead? && id_or_email_md5.include?("@")
       @client.delete("#{resource_type}/#{id_or_email_md5}")
       id_or_email_md5
     end
@@ -60,6 +44,22 @@ module Mailbluster
     end
 
     private
+
+    def query_parameterize(id_or_email_md5)
+      id_or_email_md5.map do |k, v|
+        [Utils.camelize(k.to_s), v]
+      end.to_h
+    end
+
+    def map_to_resource(id_or_email_md5, raw_resource_attributes)
+      if id_or_email_md5 == "" && raw_resource_attributes[resource_type].is_a?(Array)
+        raw_resource_attributes[resource_type].map do |rra|
+          Resource.new(self, rra)
+        end
+      else
+        Resource.new(self, raw_resource_attributes)
+      end
+    end
 
     def singular_resource_type
       resource_type[0..-2]

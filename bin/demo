@@ -7,7 +7,7 @@ puts "========================================"
 
 mailbluster_client = Mailbluster::Client.new(
   ENV["MAILBLUSTER_API_KEY"],
-  Logger.new(STDOUT)
+  Logger.new($stdout)
 )
 
 puts "Mailbluster client initialized!"
