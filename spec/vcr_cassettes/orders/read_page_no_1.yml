@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.mailbluster.com/api/orders/?pageNo=1
+    body:
+      encoding: UTF-8
+      string: "{}"
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - mailbluster-ruby/0.1.0/rest-client/2.1.0 (darwin18.7.0 x86_64) ruby/2.4.9p362
+      Content-Type:
+      - application/json
+      Authorization:
+      - MAILBLUSTER_API_KEY
+      Content-Length:
+      - '2'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mailbluster.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 09 Mar 2023 21:24:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'none';frame-ancestors 'none'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Permissions-Policy:
+      - interest-cohort=()
+      Vary:
+      - Origin
+      Etag:
+      - W/"3a7-kd2KjAHde10R/nvMvNIM04YbJbY"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=AuywTEOZkuWcCdHPw%2FQOmXdYCcn4LL8I9OfRdR4fiTAGO%2F%2FJGT5JDqgoMjMR0GV4uP1TE0emaOdxfSJUICYdijE30eB%2B6HqYXN0HOSNPnRGeMNDo%2BT3Gg6pHcRMh4bZeqqFrHXo1"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a56627a4a14f2c8-WAW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"orders":[{"id":"order_id_0001","currency":"USD","totalPrice":"10.43","createdAt":"2023-03-09T21:24:16.000Z","updatedAt":"2023-03-09T21:24:16.000Z","campaign":null,"brand":{"id":24300,"name":"Mailbluster
+        API Test"},"orderItems":[{"quantity":2,"price":"4.15","product":{"id":"102","name":"Slick
+        Html Template"}},{"quantity":1,"price":"2.13","product":{"id":"101","name":"Reign
+        Html Template"}}],"lead":{"fullName":"Richard Hendricks","id":262456644,"firstName":"Richard","lastName":"Hendricks","email":"richard@example.com","timezone":"America/Toronto","ipAddress":null,"subscribed":true,"optInStatus":"waiting","subscribedAt":null,"meta":{"city":"","role":"CEO","source":"Lead
+        API","company":"Pied Piper","country":"Canada","latitude":43.6319,"continent":"North
+        America","longitude":-79.3716},"fields":{},"tags":["iPhone User","Startup"]}}],"meta":{"total":1,"prevPageNo":null,"pageNo":1,"nextPageNo":null,"perPage":10,"totalPage":1}}'
+  recorded_at: Thu, 09 Mar 2023 21:24:25 GMT
+recorded_with: VCR 6.0.0
