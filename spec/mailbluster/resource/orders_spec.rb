@@ -85,7 +85,7 @@ RSpec.describe Mailbluster::Resource do
     end
 
     describe "#update" do
-      xit "updates a order" do
+      it "updates a order" do
         VCR.use_cassette("orders/update") do
           mailbluster_client = Mailbluster::Client.new
 
@@ -105,7 +105,7 @@ RSpec.describe Mailbluster::Resource do
                   "Developer"
                 ]
               },
-              "campaignId" => 2,
+              "campaignId" => 174_486,
               "currency" => "USD",
               "totalPrice" => 17.28,
               "items" => [
@@ -127,8 +127,8 @@ RSpec.describe Mailbluster::Resource do
           expect(updated_order).to be_a(described_class)
           expect(updated_order.raw_attributes).to include("id")
           expect(updated_order.raw_attributes).to include("totalPrice")
-          expect(updated_order.raw_attributes["totalPrice"]).to eq("10.43")
-          expect(updated_order.total_price).to eq("10.43")
+          expect(updated_order.raw_attributes["totalPrice"]).to eq("17.28")
+          expect(updated_order.total_price).to eq("17.28")
         end
       end
     end
