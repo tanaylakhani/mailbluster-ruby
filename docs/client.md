@@ -5,10 +5,10 @@ Mailbluster client is a wrapper over Mailbluster API. It allows to perform HTTP 
 
 ```ruby
 mailbluster_client = Mailbluster::Client.new
-lead = mailbluster.leads.create(email: 'lead@example.org')
+lead = mailbluster_client.leads.create(email: 'lead@example.org')
 puts lead.inspect # => #<Mailbluster::Lead id: 1, email: "lead@example.org", ...>
 
-mailbluster.leads.find(lead.id) # => #<Mailbluster::Lead id: 1, ...>
+mailbluster_client.leads.read(lead.id) # => #<Mailbluster::Lead id: 1, ...>
 ```
 
 ## Errors

@@ -53,10 +53,36 @@ mailbluster_client = Mailbluster::Client.new('your-api-key')
 
 ```ruby
 mailbluster_client = Mailbluster::Client.new
-lead = mailbluster.leads.create(email: 'lead@example.org')
+lead = mailbluster_client.leads.create(email: 'lead@example.org')
 puts lead.inspect # => #<Mailbluster::Resource @resource_type=#<Mailbluster::ResourceType::Lead>, @raw_attributes={"id"=>262093545 ...}>
 
-mailbluster.leads.find(lead.email) # => #<Mailbluster::Resource @resource_type=#<Mailbluster::ResourceType::Lead>, @raw_attributes={"id"=>262093545 ...}>
+mailbluster_client.leads.read(lead.email) # => #<Mailbluster::Resource @resource_type=#<Mailbluster::ResourceType::Lead>, @raw_attributes={"id"=>262093545 ...}>
+```
+
+## Sample Attributes to create Lead
+```ruby
+create_lead_attributes = {
+  "firstName" => "Richard",
+  "lastName" => "Hendricks",
+  "fields" => {
+    "gender" => "Male",
+    "address" => "Silicon Valley"
+  },
+  "email" => "richard@example.com",
+  "ipAddress" => "162.213.1.246",
+  "subscribed" => false,
+  "doubleOptIn" => true,
+  "meta" => {
+    "company" => "Pied Piper",
+    "role" => "CEO"
+  },
+  "tags" => [
+    "iPhone User",
+    "Startup"
+  ],
+  "overrideExisting" => true
+}
+
 ```
 
 ### Demo script
