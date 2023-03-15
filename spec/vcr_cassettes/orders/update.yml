@@ -1,0 +1,81 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://api.mailbluster.com/api/orders/order_id_0001
+    body:
+      encoding: UTF-8
+      string: '{"customer":{"fields":{"gender":"Male","address":"Silicon Valley"},"subscribed":false,"meta":{"gender":"Male"},"tags":["Developer"]},"campaignId":174486,"currency":"USD","totalPrice":17.28,"items":[{"id":"103","name":"Falcon
+        Html Template","price":4.49,"quantity":2},{"id":"102","name":"Slick Html Template","price":4.15,"quantity":2}]}'
+    headers:
+      Accept:
+      - application/json
+      User-Agent:
+      - mailbluster-ruby/1.0.0/rest-client/2.1.0 (darwin18.7.0 x86_64) ruby/2.4.9p362
+      Content-Type:
+      - application/json
+      Authorization:
+      - MAILBLUSTER_API_KEY
+      Content-Length:
+      - '336'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Host:
+      - api.mailbluster.com
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Tue, 14 Mar 2023 14:44:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '1004'
+      Connection:
+      - keep-alive
+      Content-Security-Policy:
+      - default-src 'none';frame-ancestors 'none'
+      Strict-Transport-Security:
+      - max-age=63072000; includeSubDomains; preload
+      X-Frame-Options:
+      - DENY
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Xss-Protection:
+      - '0'
+      Permissions-Policy:
+      - interest-cohort=()
+      Vary:
+      - Origin
+      Etag:
+      - W/"3ec-Pf8e1uSb2e/rL4DcjzSoeRLDwyo"
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=zLTNRI7DWqu2sOhVklTMy2q%2B%2FSZQAevzu9lwsqT2gpEpPoQChTAm6daxm9X2BaJGRIhOXxDb%2B%2F1i2XTyG%2BjYhhq7PT9eTYkzdvei4FwVd7aBC947lU3ZVRf3Rs77GFMva0ewV76B"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 7a7d4b94d9ec5007-WAW
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"message":"Order updated","order":{"id":"order_id_0001","currency":"USD","totalPrice":"17.28","createdAt":"2023-03-11T12:47:13.000Z","updatedAt":"2023-03-14T14:44:32.000Z","lead":{"fullName":"Richard
+        Hendricks","id":262456644,"firstName":"Richard","lastName":"Hendricks","email":"richard@example.com","timezone":"America/Toronto","ipAddress":null,"subscribed":false,"optInStatus":"waiting","subscribedAt":null,"meta":{"city":"","role":"CEO","gender":"Male","source":"Lead
+        API","company":"Pied Piper","country":"Canada","latitude":43.6319,"continent":"North
+        America","longitude":-79.3716},"fields":{},"tags":["iPhone User","Startup","Developer"]},"campaign":{"id":174486,"name":"Unnamed
+        campaign - 11 Mar''23 06:14:33 PM","status":"draft","recipientName":"All recipients"},"brand":{"id":24300,"name":"Mailbluster
+        API Test"},"orderItems":[{"quantity":2,"price":"4.15","product":{"id":"102","name":"Slick
+        Html Template"}},{"quantity":2,"price":"4.49","product":{"id":"103","name":"Falcon
+        Html Template"}}]}}'
+  recorded_at: Tue, 14 Mar 2023 14:44:32 GMT
+recorded_with: VCR 6.0.0
