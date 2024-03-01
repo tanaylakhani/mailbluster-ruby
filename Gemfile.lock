@@ -31,7 +31,7 @@ GEM
       ast (~> 2.4.1)
     public_suffix (4.0.7)
     rainbow (3.1.1)
-    rake (13.0.6)
+    rake (13.1.0)
     rest-client (2.1.0)
       http-accept (>= 1.7.0, < 2.0)
       http-cookie (>= 1.0.2, < 2.0)
@@ -89,7 +89,7 @@ PLATFORMS
 DEPENDENCIES
   mailbluster!
   parallel (= 1.19.2)
-  rake (~> 13.0)
+  rake (~> 13.1)
   rspec (~> 3.12)
   rubocop
   rubocop-packaging
